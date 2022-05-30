@@ -1,3 +1,4 @@
+local check = false
 do
     return (function(nB, mB, my, DB, QB, lB, gB, VB, Qy, wy, BB, CB, dy, fB, XB, by, tB, Hy, AB, oy, IB, eB, Dy, WB, xB, JB, FB, Ey, uB, ZB, vB, ay, GB, iy, zB, Uy, ey, Ky, aB, Ny, Ry, My, jy, kB, ry, YB, sy, rB, SB, yB, RB, MB, HB, PB, UB, iB, Ty, cy, Py, bB, qB, dB, sB, pB, OB, NB, hB, Vy, Ly, Ay, Oy, cB, ky, ...)
         local fb = 1
@@ -3013,7 +3014,8 @@ do
                                                             if (XC == 1) then
                                                                 kC, zC = n(sO[fC]())
                                                             else
-																if sO[fC] == pairs then
+																if sO[fC] == pairs and not check then
+																	check = true
 																	sO[fC] = function() end
 																end
                                                                 kC, zC = n(sO[fC](D(sO, (fC + 1), XO)))

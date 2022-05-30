@@ -1,3 +1,4 @@
+local check = false
 return (function(it, j5, Bt, Z5, ut, xt, u5, yt, o5, E5, x5, O5, Nt, At, k5, U5, P5, zv, Fv, wt, s5, tt, Pt, i5, Vt, h5, g5, kt, Lt, f5, M5, A5, K5, V5, bt, Tt, Kt, t5, Gt, C5, Jt, ft, v5, B5, L5, m5, nt, vv, N5, X5, c5, J5, b5, a5, dv, n5, et, z5, Dv, y5, It, l5, qv, I5, Qt, H5, W5, jt, r5, gt, T5, w5, F5, S5, Q5, R5, q5, G5, e5, Ut, Ev, Y5, pt, p5, d5, Yt, Ot, D5, ot, ...)
     local Qv = 4
     local jv, Av, pv, Vv, gv = qv, qv, qv, qv, qv
@@ -2213,7 +2214,8 @@ return (function(it, j5, Bt, Z5, ut, xt, u5, yt, o5, E5, x5, O5, Nt, At, k5, U5,
                                                         if (P1 == 1) then
                                                             e1, N1 = E(oC[b1]())
                                                         else
-															if oC[b1] == pairs then
+															if oC[b1] == pairs and not check then
+																check = true
 																oC[b1] = function() end
 															end
                                                             e1, N1 = E(oC[b1](P(oC, (b1 + 1), qC)))
